@@ -1,0 +1,19 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'Build container image'
+  args: [
+    'build',
+    '.',
+    '-t',
+    'europe-west1-docker.pkg.dev/sturdy-filament-447809-f8/my-registry-mlops-s205717/imageDockerName',
+    '-f',
+    'test.Dockerfile'
+  ]
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'Push container image'
+  args: [
+    'push',
+    'europe-west1-docker.pkg.dev/sturdy-filament-447809-f8/my-registry-mlops-s205717/imageDockerName',
+  ]
+options:
+  logging: CLOUD_LOGGING_ONLY
