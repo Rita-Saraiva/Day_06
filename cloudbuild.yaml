@@ -15,5 +15,5 @@ steps:
     'push',
     'europe-west1-docker.pkg.dev/sturdy-filament-447809-f8/test-repository/imagedockername',
   ]
-#options:
-#  logging: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY
